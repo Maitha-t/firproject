@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Lab</title>
+<link rel = "stylesheet" type="text/css"  href = " pro.css" >
+</head>
+
+<body>
+<h1> This is my First HTML page </h1>
+<h2>my name : Maitha al harbi</h2>
+<a href="https://twitter.com/maith24_" > My twitter Account
+<br> </br>
+<img src="tree.jpg" alt="twitter" height="60" width="90">
+</a>
+<div>
+  <img class="mySlides" src="jhFBnaBX.jpg" style="width:30%">
+  <img class="mySlides" src="1yBe12SB.jpg" style="width:30%">
+  <img class="mySlides" src="old.jpg" style="width:30%">
+</div>
+<h2> most popular apps</h2>
+<ol>
+<li>twitter</li>
+<li>instagram</li>
+</ol>
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+</body>
+</html>
